@@ -1,0 +1,73 @@
+<configuration>
+	<dataSources>
+		<!-- 			Datasource example
+		<dataSource 
+			name="Source Name (custom)"
+			url="http://tile_server_name.xxx/${z}/${x}/${y}.png" 
+			query="apikey=xxxx&var=yyyy" 
+			imageType="jpg"
+			yOrigineIsBottom="false" 
+		/>
+		this config would present a url like this: http://tile_server_name.xxx/{z}/{x}/{y}.jpg?apikey=xxxx&var=yyyy
+		-->
+		
+		<dataSource 
+			name="Open Street Map"
+			url="http://a.tile.openstreetmap.com/${z}/${x}/${y}.png" 
+			query="" 
+			imageType="png"
+			yOrigineIsBottom="false" 
+		/>
+		<dataSource
+			name="Open Cycle Map Transport"
+			url="http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png" 
+			query="" 
+			imageType="png"
+			yOrigineIsBottom="false" 
+		/>
+		<dataSource 
+			name="Open Cycle Map Landscape"
+			url="http://a.tile2.opencyclemap.org/landscape/${z}/${x}/${y}.png" 
+			query="" 
+			imageType="png"
+			yOrigineIsBottom="false" 
+		/>
+		<dataSource
+			name="Stamen Water Color" 		
+			url="http://c.tile.stamen.com/watercolor/${z}/${x}/${y}.png" 
+			query="" 
+			imageType="png"
+			yOrigineIsBottom="false" 
+		/>
+		<!-- use "&amp;" instead of "&" -->
+		<dataSource
+			name="Google Maps Hybrid Layer" 		
+			url="http://mt.google.com/vt/lyrs=y&amp;x=${x}&amp;y=${y}&amp;z=${z}" 
+			query="" 
+			imageType="jpg"
+			yOrigineIsBottom="false" 
+		/>
+		<!-- use "&amp;" instead of "&" -->
+		<dataSource
+			name="Google Maps Map Layer" 		
+			url="http://mt.google.com/vt/lyrs=m&amp;x=${x}&amp;y=${y}&amp;z=${z}" 
+			query="" 
+			imageType="jpg"
+			yOrigineIsBottom="false" 
+		/>
+		<dataSource
+			name="ESRI ArcGIS REST World Imagery" 		
+			url="http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}" 
+			query="" 
+			imageType="jpg"
+			yOrigineIsBottom="false" 
+		/>
+		<dataSource
+			name="ESRI ArcGIS REST World Street" 		
+			url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/${z}/${y}/${x}" 
+			query="" 
+			imageType="jpg"
+			yOrigineIsBottom="false" 
+		/>
+	</dataSources>
+</configuration>	
