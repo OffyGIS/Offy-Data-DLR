@@ -48,15 +48,15 @@ At any time, during or after downloading, you could preview the downloaded tile:
 
 ### ✓ Include the output in your projects
 
-#### For ***Desktop GIS clients***
+#### For **Desktop GIS clients**
 
-##### • **Create your TMS service definition file:**
+##### • ***Create your TMS service definition file:***
 
 >Menu -> Tools -> Export TMS service definition
 
 the file will be exported to your area folder
 
-##### • **Put the output on a local web server (localhost):**
+##### • ***Put the output on a local web server (localhost):***
 The reason why we need a web server is that GDAL_WMS definition are not complient with file:/// protocol. So, a local web server will help you to use Tiles within http:// protocol.
 
 >If you don't have a local web server, you could use one of the following:
@@ -69,7 +69,7 @@ The reason why we need a web server is that GDAL_WMS definition are not complien
 
 Copy the output **Tiles** Folder to the **/www** folder of your local web server
 
-##### • **Include the exported XML file in your project:**
+##### • ***Include the exported XML file in your project:***
 Modify the **ServerUrl** in the XML file to match the Tiles location in your web server, and copy it where you want !!
 
 * For ***Qgis***: Add Raster -> select the XML file
@@ -77,7 +77,7 @@ Modify the **ServerUrl** in the XML file to match the Tiles location in your web
 
 That's it!
 
-#### For ***WebMap clients***
+#### For **WebMap clients**
 
 ##### • ***Openlayers:***
 Create a layer and add it to your map ({imageType} is your images extention).
