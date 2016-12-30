@@ -89,21 +89,21 @@ That's it!
 Create a layer and add it to your map ({imageType} is your images extention).
 
 from a local absolute path
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'file:///C:/.../tiles_directory/{z}/{x}/{y}.{imageType}'})
 });
 ```
 from a local relative path
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'tiles_directory/{z}/{x}/{y}.{imageType}'})
 });
 ```
 from your local web server
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'http://localhost/tiles_directory/{z}/{x}/{y}.{imageType}'})
@@ -113,15 +113,15 @@ var TileLayer = new ol.layer.Tile
 ##### • ***Leaflet:***
 Create a layer and add it to your map ({imageType} is your images extention).
 from a local relative path
-```
+```javascript
 var TileLayer = L.tileLayer('file:///C:/.../tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
 from a local relative path
-```
+```javascript
 var TileLayer = L.tileLayer('tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
 from your local web server
-```
+```javascript
 var TileLayer = L.tileLayer('http://localhost/tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
 
