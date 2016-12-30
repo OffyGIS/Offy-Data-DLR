@@ -1,6 +1,8 @@
 # Offy Data DLR
 >*Make your offline projects more productive and useful*
 
+<img src="https://github.com/OffyGIS/Offy-Data-DLR/blob/master/offyapp.JPG" width="300" height="200"/>
+
 **Offy Data Downloader** is an, open source desktop portable, application used to download different types of open GIS data for an offline use later.
 For now, it's downloading tiles from all known tile servers, store them at your machine and give you the possibility to include them easily in different GIS clients : 
 
