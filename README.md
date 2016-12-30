@@ -25,21 +25,23 @@ For now, it's downloading tiles from all known tile servers, store them at your 
 * Internet connexion
 
 ### ✓ Create your first Area
->1. Download the latest release, extrat and open **"Offy Data DLR.exe"**
+>1. Download the latest release from [Latest release](https://github.com/OffyGIS/Offy-Data-DLR/releases/latest)
 
->2. Take a look at the "Usage Policy": Menu -> ? -> Data usage policy
+>2. Extrat and open **"Offy Data DLR.exe"**
 
->3. Navigate to a region (city) by zoom/pan using the mouse
+>3. Take a look at the "Usage Policy": Menu -> ? -> Data usage policy
 
->4. Select an area by draging a box on the map view using the mouse
+>4. Navigate to a region (city) by zoom/pan using the mouse
 
->5. Select zoom levels: Min=1 -> Max=13
+>5. Select an area by draging a box on the map view using the mouse
 
->6. Choose your data source (your tile service provider)
+>6. Select zoom levels: Min=1 -> Max=13
 
->7. Save the Area
+>7. Choose your data source (your tile service provider)
 
->8. Start the download
+>8. Save the Area
+
+>9. Start the download
 
 ### ✓ Preview downloaded data
 At any time, during or after downloading, you could preview the downloaded tile:
