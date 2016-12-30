@@ -122,3 +122,6 @@ from your local web server
 ```
 var TileLayer = L.tileLayer('http://localhost/tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
+
+## Issues & Bugs
+If you detect any issue/bug report it [here](https://github.com/OffyGIS/Offy-Data-DLR/issues). Thank you!
