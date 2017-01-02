@@ -1,1 +1,0 @@
-Copy those folder at the same level of the compiled EXE 

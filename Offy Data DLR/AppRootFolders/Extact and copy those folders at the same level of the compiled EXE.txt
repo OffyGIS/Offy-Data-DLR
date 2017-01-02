@@ -1,0 +1,1 @@
+Extact and copy those folders at the same level of the compiled EXE

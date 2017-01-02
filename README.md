@@ -1,6 +1,8 @@
 # Offy Data DLR
 >*Make your offline projects more productive and useful*
 
+<img src="https://raw.githubusercontent.com/OffyGIS/Offy-Data-DLR/master/offyapp.JPG" width="300" height="200"/>
+
 **Offy Data Downloader** is an, open source desktop portable, application used to download different types of open GIS data for an offline use later.
 For now, it's downloading tiles from all known tile servers, store them at your machine and give you the possibility to include them easily in different GIS clients : 
 
@@ -25,21 +27,23 @@ For now, it's downloading tiles from all known tile servers, store them at your 
 * Internet connexion
 
 ### ✓ Create your first Area
->1. Download the latest release, extrat and open **"Offy Data DLR.exe"**
+>1. Download the latest release from [Latest release](https://github.com/OffyGIS/Offy-Data-DLR/releases/latest)
 
->2. Take a look at the "Usage Policy": Menu -> ? -> Data usage policy
+>2. Extrat and open **"Offy Data DLR.exe"**
 
->3. Navigate to a region (city) by zoom/pan using the mouse
+>3. Take a look at the "Usage Policy": Menu -> ? -> Data usage policy
 
->4. Select an area by draging a box on the map view using the mouse
+>4. Navigate to a region (city) by zoom/pan using the mouse
 
->5. Select zoom levels: Min=1 -> Max=13
+>5. Select an area by draging a box on the map view using the mouse
 
->6. Choose your data source (your tile service provider)
+>6. Select zoom levels: Min=1 -> Max=13
 
->7. Save the Area
+>7. Choose your data source (your tile service provider)
 
->8. Start the download
+>8. Save the Area
+
+>9. Start the download
 
 ### ✓ Preview downloaded data
 At any time, during or after downloading, you could preview the downloaded tile:
@@ -75,6 +79,8 @@ Modify the **ServerUrl** in the XML file to match the Tiles location in your web
 * For ***Qgis***: Add Raster -> select the XML file
 * For ***ArcGIS***: Add Data -> select the XML file
 
+>You just know about on-fly projection transformations to adjust other data with your local tile service projection.
+
 That's it!
 
 #### For **WebMap clients**
@@ -83,21 +89,21 @@ That's it!
 Create a layer and add it to your map ({imageType} is your images extention).
 
 from a local absolute path
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'file:///C:/.../tiles_directory/{z}/{x}/{y}.{imageType}'})
 });
 ```
 from a local relative path
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'tiles_directory/{z}/{x}/{y}.{imageType}'})
 });
 ```
 from your local web server
-```
+```javascript
 var TileLayer = new ol.layer.Tile
 ({
     source: new ol.source.XYZ({url: 'http://localhost/tiles_directory/{z}/{x}/{y}.{imageType}'})
@@ -107,14 +113,17 @@ var TileLayer = new ol.layer.Tile
 ##### • ***Leaflet:***
 Create a layer and add it to your map ({imageType} is your images extention).
 from a local relative path
-```
+```javascript
 var TileLayer = L.tileLayer('file:///C:/.../tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
 from a local relative path
-```
+```javascript
 var TileLayer = L.tileLayer('tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
 from your local web server
-```
+```javascript
 var TileLayer = L.tileLayer('http://localhost/tiles_directory/{z}/{x}/{y}.{imageType}', { minZoom: 1, maxZoom: 14 });
 ```
+
+## Issues & Bugs
+If you detect any issue/bug report it [here](https://github.com/OffyGIS/Offy-Data-DLR/issues). Thank you!
