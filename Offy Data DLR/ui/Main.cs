@@ -198,6 +198,8 @@ namespace Offy.ui
         {
             m_openArea.DropDownItems.Clear();
 
+            if (!Directory.Exists(areas_Folder)) Directory.CreateDirectory(areas_Folder);
+
             foreach(var d in Directory.GetDirectories(areas_Folder))
             {
                 string areaName = FileManager.getAreaName(Path.Combine(d, "area.areadef"));

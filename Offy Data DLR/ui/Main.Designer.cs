@@ -210,7 +210,7 @@
             this.cbx_datasource.FormattingEnabled = true;
             this.cbx_datasource.Location = new System.Drawing.Point(6, 19);
             this.cbx_datasource.Name = "cbx_datasource";
-            this.cbx_datasource.Size = new System.Drawing.Size(171, 21);
+            this.cbx_datasource.Size = new System.Drawing.Size(196, 21);
             this.cbx_datasource.TabIndex = 0;
             this.cbx_datasource.SelectedIndexChanged += new System.EventHandler(this.cbx_datasource_SelectedIndexChanged);
             // 
