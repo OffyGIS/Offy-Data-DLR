@@ -127,3 +127,12 @@ var TileLayer = L.tileLayer('http://localhost/tiles_directory/{z}/{x}/{y}.{image
 
 ## Issues & Bugs
 If you detect any issue/bug report it [here](https://github.com/OffyGIS/Offy-Data-DLR/issues). Thank you!
+
+## Important
+
+- The provided services definitions are not **HARD CODED**. Take a look at the application Config file.
+- Data services definitions are provided **AS IS** and are not validated by the application authors.
+- The Provided Data services are a **PROOF-OF-CONCEPT** and for testing.
+- Please take a look at the Usage Policy of any Service you use, contact the Server Owner/Admin if needed or/and be sure you're eligible to download the data.
+- Offy Data DLR does not guarantee the availability or the precision of provided Data Services. Contact the service provider if there is something wrong.
+- Do not select a large areas and unusefull detailed zoom levels (17,18) to download. You may slow down the data service and your machine. In addition, the server may block your requests at any time.
