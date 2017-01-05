@@ -71,7 +71,9 @@
             this.m_tilesFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.m_tilesSummary = new System.Windows.Forms.ToolStripMenuItem();
             this.m_browseDownloadedTiles = new System.Windows.Forms.ToolStripMenuItem();
-            this.m_exportGdalWmsFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_exportTMSFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Tms_EPSG3785 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Tms_EPSG3857 = new System.Windows.Forms.ToolStripMenuItem();
             this.m_initializeArea = new System.Windows.Forms.ToolStripMenuItem();
             this.m_sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.m_copyExtent = new System.Windows.Forms.ToolStripMenuItem();
@@ -514,7 +516,7 @@
             this.m_tilesFolder,
             this.m_tilesSummary,
             this.m_browseDownloadedTiles,
-            this.m_exportGdalWmsFile,
+            this.m_exportTMSFile,
             this.m_initializeArea,
             this.m_sep3,
             this.m_copyExtent,
@@ -527,7 +529,7 @@
             // m_area_folder
             // 
             this.m_area_folder.Name = "m_area_folder";
-            this.m_area_folder.Size = new System.Drawing.Size(254, 22);
+            this.m_area_folder.Size = new System.Drawing.Size(246, 22);
             this.m_area_folder.Text = "Open Area folder";
             this.m_area_folder.ToolTipText = "Draw manual extent on map";
             this.m_area_folder.Click += new System.EventHandler(this.m_area_folder_Click);
@@ -535,42 +537,58 @@
             // m_tilesFolder
             // 
             this.m_tilesFolder.Name = "m_tilesFolder";
-            this.m_tilesFolder.Size = new System.Drawing.Size(254, 22);
+            this.m_tilesFolder.Size = new System.Drawing.Size(246, 22);
             this.m_tilesFolder.Text = "Open Tiles folder";
             this.m_tilesFolder.Click += new System.EventHandler(this.m_tilesFolder_Click);
             // 
             // m_tilesSummary
             // 
             this.m_tilesSummary.Name = "m_tilesSummary";
-            this.m_tilesSummary.Size = new System.Drawing.Size(254, 22);
+            this.m_tilesSummary.Size = new System.Drawing.Size(246, 22);
             this.m_tilesSummary.Text = "Tiles summary";
             this.m_tilesSummary.Click += new System.EventHandler(this.m_tilesSummary_Click);
             // 
             // m_browseDownloadedTiles
             // 
             this.m_browseDownloadedTiles.Name = "m_browseDownloadedTiles";
-            this.m_browseDownloadedTiles.Size = new System.Drawing.Size(254, 22);
+            this.m_browseDownloadedTiles.Size = new System.Drawing.Size(246, 22);
             this.m_browseDownloadedTiles.Text = "Browse downloaded Tiles";
             this.m_browseDownloadedTiles.Click += new System.EventHandler(this.m_browseDownloadedTiles_Click);
             // 
-            // m_exportGdalWmsFile
+            // m_exportTMSFile
             // 
-            this.m_exportGdalWmsFile.Name = "m_exportGdalWmsFile";
-            this.m_exportGdalWmsFile.Size = new System.Drawing.Size(254, 22);
-            this.m_exportGdalWmsFile.Text = "Export your TMS service definition";
-            this.m_exportGdalWmsFile.Click += new System.EventHandler(this.m_exportGdalWmsFile_Click);
+            this.m_exportTMSFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m_Tms_EPSG3785,
+            this.m_Tms_EPSG3857});
+            this.m_exportTMSFile.Name = "m_exportTMSFile";
+            this.m_exportTMSFile.Size = new System.Drawing.Size(246, 22);
+            this.m_exportTMSFile.Text = "Export TMS service definition file";
+            // 
+            // m_Tms_EPSG3785
+            // 
+            this.m_Tms_EPSG3785.Name = "m_Tms_EPSG3785";
+            this.m_Tms_EPSG3785.Size = new System.Drawing.Size(242, 22);
+            this.m_Tms_EPSG3785.Text = "Web Mercator / X,Y (EPSG:3785)";
+            this.m_Tms_EPSG3785.Click += new System.EventHandler(this.m_Tms_EPSG3785_Click);
+            // 
+            // m_Tms_EPSG3857
+            // 
+            this.m_Tms_EPSG3857.Name = "m_Tms_EPSG3857";
+            this.m_Tms_EPSG3857.Size = new System.Drawing.Size(242, 22);
+            this.m_Tms_EPSG3857.Text = "Web Mercator / X,Y (EPSG:3857)";
+            this.m_Tms_EPSG3857.Click += new System.EventHandler(this.m_Tms_EPSG3857_Click);
             // 
             // m_initializeArea
             // 
             this.m_initializeArea.Name = "m_initializeArea";
-            this.m_initializeArea.Size = new System.Drawing.Size(254, 22);
+            this.m_initializeArea.Size = new System.Drawing.Size(246, 22);
             this.m_initializeArea.Text = "Initialize download";
             this.m_initializeArea.Click += new System.EventHandler(this.m_initializeArea_Click);
             // 
             // m_sep3
             // 
             this.m_sep3.Name = "m_sep3";
-            this.m_sep3.Size = new System.Drawing.Size(251, 6);
+            this.m_sep3.Size = new System.Drawing.Size(243, 6);
             // 
             // m_copyExtent
             // 
@@ -578,7 +596,7 @@
             this.m_getExtentWGS84,
             this.m_getExtentWebMercator});
             this.m_copyExtent.Name = "m_copyExtent";
-            this.m_copyExtent.Size = new System.Drawing.Size(254, 22);
+            this.m_copyExtent.Size = new System.Drawing.Size(246, 22);
             this.m_copyExtent.Text = "Copy Extent to clipboard";
             // 
             // m_getExtentWGS84
@@ -604,7 +622,7 @@
             this.m_nauticalMile,
             this.m_metric});
             this.m_mapScale.Name = "m_mapScale";
-            this.m_mapScale.Size = new System.Drawing.Size(254, 22);
+            this.m_mapScale.Size = new System.Drawing.Size(246, 22);
             this.m_mapScale.Text = "Map scale units";
             // 
             // m_degrees
@@ -886,7 +904,9 @@
         private System.Windows.Forms.ToolStripMenuItem m_more;
         private System.Windows.Forms.ToolStripMenuItem m_about;
         private System.Windows.Forms.ToolStripMenuItem m_usagePolicy;
-        private System.Windows.Forms.ToolStripMenuItem m_exportGdalWmsFile;
+        private System.Windows.Forms.ToolStripMenuItem m_exportTMSFile;
+        private System.Windows.Forms.ToolStripMenuItem m_Tms_EPSG3785;
+        private System.Windows.Forms.ToolStripMenuItem m_Tms_EPSG3857;
     }
 }
 

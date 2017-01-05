@@ -288,7 +288,7 @@ namespace Offy.Core
             toStream.Close();
         }
 
-        public static bool saveTMSDefFile(string areasFolder, Area area, string imageType)
+        public static bool saveTMSDefFile(string areasFolder, Area area, string imageType, string outEpsg)
         {
             XmlDocument doc = new XmlDocument();
 
@@ -339,7 +339,7 @@ namespace Offy.Core
             ///////////////////////////////////////////////////////////////////////////
 
             XmlNode ProjectionNode = newXmlNode(doc, "Projection");
-            ProjectionNode.InnerText = "EPSG:3857";
+            ProjectionNode.InnerText = "EPSG:"+ outEpsg;
             XmlNode BlockSizeXNode = newXmlNode(doc, "BlockSizeX");
             BlockSizeXNode.InnerText = "256";
             XmlNode BlockSizeYNode = newXmlNode(doc, "BlockSizeY");

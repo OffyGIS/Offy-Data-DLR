@@ -900,17 +900,27 @@ namespace Offy.ui
             frm.ShowDialog(this);
         }
 
-        private void m_exportGdalWmsFile_Click(object sender, EventArgs e)
+        private void exportTMSFile(string epsg)
         {
             if (area == null || !area.SavedOnDisk) return;
             string msg;
 
-            if (FileManager.saveTMSDefFile(this.areas_Folder, area, selectedDataSource.ImageType))
+            if (FileManager.saveTMSDefFile(this.areas_Folder, area, selectedDataSource.ImageType, epsg))
                 msg = "TMS file definition created successfully.";
             else
                 msg = "The TMS file was not created! Verify if an old version is opened by another program.";
 
             Message_Box(msg);
+        }
+
+        private void m_Tms_EPSG3785_Click(object sender, EventArgs e)
+        {
+            exportTMSFile("3785");
+        }
+
+        private void m_Tms_EPSG3857_Click(object sender, EventArgs e)
+        {
+            exportTMSFile("3857");
         }
     }
 }
