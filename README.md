@@ -79,7 +79,7 @@ Modify the **ServerUrl** in the XML file to match the Tiles location in your web
 * For ***Qgis***: Add Raster -> select the XML file
 * For ***ArcGIS***: Add Data -> select the XML file
 
->You just know about on-fly projection transformations to adjust other data with your local tile service projection.
+>You should know about the on-fly projection transformations to adjust other data with your local tile service projection.
 
 That's it!
 
